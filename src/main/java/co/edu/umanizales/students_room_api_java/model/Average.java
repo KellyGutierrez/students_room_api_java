@@ -11,4 +11,3 @@ public class Average {
     String gender;
     double average_salary;
 }
-

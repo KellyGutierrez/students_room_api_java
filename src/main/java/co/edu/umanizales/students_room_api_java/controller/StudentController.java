@@ -1,6 +1,5 @@
 package co.edu.umanizales.students_room_api_java.controller;
 
-
 import co.edu.umanizales.students_room_api_java.model.Average;
 import co.edu.umanizales.students_room_api_java.model.Student;
 import co.edu.umanizales.students_room_api_java.service.StudentService;
@@ -18,6 +17,7 @@ public class StudentController
 {
     @Autowired
     private StudentService studentService;
+
 
     @GetMapping()
     public List<Student> getAllStudents()
@@ -40,7 +40,7 @@ public class StudentController
     @GetMapping(path="/students work/{gender}/{salary}")
     public List<Student> getStudentsWorkBysalary
             (@PathVariable char gender,
-             @PathVariable double salary){
+            @PathVariable double salary){
         return studentService.getStudentsWorkBysalary(gender,salary);
     }
 
@@ -67,6 +67,4 @@ public class StudentController
     public List<Student> getRuralStudent(@PathVariable  char first_number) {
         return studentService.getRuralStudent(first_number);
     }
-
-
 }

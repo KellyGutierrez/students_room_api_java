@@ -1,6 +1,5 @@
 package co.edu.umanizales.students_room_api_java.service;
 
-
 import co.edu.umanizales.students_room_api_java.model.Average;
 import co.edu.umanizales.students_room_api_java.model.Student;
 import org.springframework.stereotype.Service;
@@ -10,7 +9,6 @@ import java.util.List;
 
 @Service
 public class StudentService {
-
     private List<Student> students;
 
     public StudentService() {
@@ -147,3 +145,10 @@ public class StudentService {
         return ruralStudents;
     }
 }
+
+
+
+
+
+
+
