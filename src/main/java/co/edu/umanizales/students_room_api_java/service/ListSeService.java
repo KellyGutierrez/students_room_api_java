@@ -46,6 +46,40 @@ public class ListSeService {
         }
     }
 
+    public String invert() {
+        try {
+            this.list.invert();
+            return "Invertido con éxito";
+        } catch (Exception e) {
+            return e.getMessage();
+
+        }
+    }
+    public String toExchange()
+    {
+        try {
+            this.list.toExchange();
+            return "Intercambio realizado";
+        }
+        catch (Exception e)
+        {
+            return e.getMessage();
+        }
+    }
+    public String mixByGender()
+    {
+        try {
+            this.list.mixByGender();
+            return "Se ha intercalado la lista exitosamente";
+
+        } catch (Exception e ){
+            return e.getMessage();
+        }
+
+
+
+    }
+
 
 
 }

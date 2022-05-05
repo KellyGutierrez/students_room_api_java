@@ -8,6 +8,8 @@ import co.edu.umanizales.students_room_api_java.model.Node;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "listse")
 public class ListSeController {
@@ -37,6 +39,57 @@ public class ListSeController {
     {
         return listSeService.deleteToPosition(position);
     }
+
+    @GetMapping(path = "/invert")
+    public String invert(){
+        return listSeService.invert();
+
+    }
+    @GetMapping(path = "/toexchange")
+    public String toexchange()
+    {
+        return listSeService.toExchange();
+    }
+
+
+    @GetMapping(path = "/mixbygender")
+    public String mixByGender()
+    {
+        return listSeService.mixByGender();
+
+    }
+    @PostMapping(path = "/loadpets")
+    public String loadPets(@RequestBody List<Pet> pets)
+    {
+        for(Pet pet:pets)
+        {
+            listSeService.add(pet);
+        }
+        return "Mascotas cargadas exitosamente";
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
 
 

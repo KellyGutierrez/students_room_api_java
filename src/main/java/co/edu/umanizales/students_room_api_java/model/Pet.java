@@ -11,4 +11,7 @@ public class Pet {
     private String name;
     private byte age;
     private String breed;
+    private char gender;//M:Macho , H:Hembra
+
+
 }
